@@ -369,6 +369,13 @@ a { /* gets rid of links being blue */
     font-size: xx-large;
 }
 
+.contact_module_form_section p {
+    color: red;
+    line-height: 0.25rem;
+    font-size: 1rem;
+    display: none;
+}
+
 .formborders {
     border: 2px solid var(--prim);
     border-radius: 0.25rem;
