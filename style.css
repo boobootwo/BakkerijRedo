@@ -7,7 +7,7 @@
 /* font setup */
 @font-face { font-family: Lato; src: url('assets/Fonts/Lato/Lato-Regular.ttf'); }
 @font-face { font-family: Roboto; src: url('assets/Fonts/Roboto/static/Roboto-Regular.ttf'); }
-    h1, h2, h3, h4, h5, h6, div {
+    h1, h2, h3, h4, h5, h6, div, label, table, input, textarea {
         font-family: Lato;
     }
     p, a {
@@ -47,10 +47,12 @@ a { /* gets rid of links being blue */
 }
 
 .underline {
+    text-decoration: underline;
     text-decoration-color: var(--prim);
 }
 
 .darkunderline {
+    text-decoration: underline;
     text-decoration-color: var(--primdark);
 }
 
@@ -111,11 +113,21 @@ a { /* gets rid of links being blue */
     font-weight: lighter;
 }
 
+.menuicon {
+    display: none;
+    height: 35%;
+    image-rendering: crisp-edges;
+}
+
+.menuicon:hover {
+    filter: brightness(80%);
+}
+
 /* END HEADER CODE */
 
 /* START MAIN CODE */
 
-main {      /* container for main content */
+.home_main {      /* container for main content in the index.html file*/
     display: grid;
     grid-template-rows: 1fr 3fr 1fr 3fr 1fr;
     justify-content: center;
@@ -124,6 +136,7 @@ main {      /* container for main content */
 
 .spacer {   /* whitespace between banner and main content*/
     width: 100%;
+    min-height: 5rem;
 }
 
 .home_module_overons {  /* div that contains the 'over ons' section */
@@ -163,7 +176,6 @@ main {      /* container for main content */
 .home_module_content {  /* div that contains the modules' title, text, and read more button */
     text-align: left;
     padding: 0 1rem 0 1rem;
-    background-color: aqua;
 }
 
 .home_module_content h2 { /* module caption */
@@ -192,6 +204,194 @@ main {      /* container for main content */
     filter: brightness(80%);
 }
 
+.mobileimage {  /* image that only displays for mobile version */
+    display: none;
+}
+
+.desktopimage {  /* image that only displays for desktop version */
+    display: block;
+}
+
+.overons_main {      /* container for main content in the overons.html file */
+    display: grid;
+    /* grid-template-rows: 1fr 1fr 1fr 2fr 1fr 4.5fr 1fr; */
+    justify-content: center;
+    justify-items: center;
+    max-width: 150rem;
+}
+
+.overons_module {           /* used for text divs */
+    max-width: 90%;
+    min-width: 90rem;
+    min-height: fit-content;
+}
+
+.overons_module p {
+    font-size: large;
+}
+
+.overons_imagecontainer {   /* div that contains the image div */
+    max-width: 90%;
+    min-width: 90rem;
+    min-height: 20rem;
+    justify-items: center;
+}
+
+.overons_image {            /* div that shows the actual image */
+    width: 90%;
+    height: 100%;
+    background-image: url("./assets/Fotos_website/Image-5.jpg");
+    background-position: center;
+    background-size: cover;
+    border: 0.12rem solid gray;
+    z-index: 100;
+}
+
+.overons_portraitsmodule {
+    max-width: 80%;
+    min-width: 90rem;
+    min-height: fit-content;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.overons_portraitcontainer {
+    height: fit-content;
+    width: 60%;
+    padding: 3rem;
+    justify-self: center;
+    align-self: center;
+    border: solid 0.4rem var(--prim);
+}
+
+.overons_portraitcontainer h2, .overons_portraitcontainer h3 {
+    font-weight: 500;
+    line-height: 1.2rem;
+}
+
+.overons_portraitcontainer p {
+    font-size: large;
+}
+
+.overons_portraitcontainer img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icons a i {
+    color: var(--prim);
+    font-size: 3rem;
+    letter-spacing: 1.5rem;
+}
+
+.icons a i:hover {
+    filter: brightness(80%);
+}
+
+.contact_main {      /* container for main content in the contact.html file */
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    max-width: 150rem;
+}
+
+.contact_modulescontainer {
+    max-width: 100%;
+    min-width: 90rem;
+    height: 50rem;
+    padding: 1rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+}
+
+.contact_module_info {
+    height: auto;
+    width: auto;
+}
+
+.contact_module_info h2 {
+    text-underline-offset: 1rem;
+    font-weight: lighter;
+    font-size: 45;
+}
+
+.contact_module_info h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 0rem;
+    padding-top: 20px;
+}
+
+.contact_module_info h4, .contact_module_info td {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.tabledivider {
+    color: var(--prim)
+}
+
+.contact_module_form {
+    height: auto;
+    width: auto;
+    padding: 1rem;
+    gap: 1rem;
+
+    display: grid;
+    grid-template-rows: 2fr 2fr 2fr 3fr 1fr;
+}
+
+.contact_module_form_section {
+    width: auto;
+    height: auto;
+
+    font-size: xx-large;
+    line-height: 1rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_module_form_section input {
+    width: 100%;
+    height: 4rem;
+    font-size: xx-large;
+}
+
+.contact_module_form_section textarea {
+    width: 100%;
+    height: 80%;
+    font-size: xx-large;
+}
+
+.formborders {
+    border: 2px solid var(--prim);
+    border-radius: 0.25rem;
+}
+
+.contact_module_form_buttoncontainer {
+    text-align: right;
+}
+
+.contact_module_form_buttoncontainer input {
+    background-color: var(--prim);
+    border: none;
+    border-radius: 0.25rem;
+    height: 2.5rem;
+    width: 12rem;
+    font-size: 1rem;
+    filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0,0,0,0.25));
+}
+
+.contact_module_form_buttoncontainer input:hover {
+    filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0,0,0,0.5));
+}
+
 /* END MAIN CODE */
 
 /* START FOOTER CODE */
@@ -211,22 +411,69 @@ main {      /* container for main content */
     font-size: x-large;
 }
 
+/* END FOOTER CODE */
+
+/* START MOBILE MENU SCREEN CODE */
+
+.menuscreen {   /* div that contains menu options for the mobile menu */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999; /* fixes banner overlap */
+    background-color: #D8BC69;
+    text-align: center;
+    display: none;
+    /* display: flex;  display is set to none by default but flex is there to indicate what display is supposed to be when the menu is opened. */
+    align-items: center; /* centering */
+    justify-content: center;
+}
+
+.menuscreen div a {
+    font-weight: bolder;
+    font-size: 2rem;
+    line-height: 10rem;
+}
+
+.menuscreen h1 {
+    position: absolute;
+    top: 1%;
+    right: 7%;
+    cursor: pointer;    /* indicates to the user that they can press this since its not a regular link */
+}
+
+.menuscreen a:hover, .menuscreen h1:hover {
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.25));
+}
+
+/* END MOBILE MENU SCREEN CODE */
+
+
 @media only screen and (max-width: 1600px) {
+    /* HEADER MOBILE START */
+
+    .headerbarsub a {
+        display: none;
+    }
+
+    .menuicon {
+        display: block;
+    }
+
+    /* HEADER MOBILE END */
     /* INDEX MOBILE START */
 
     main {
         display: grid;
         grid-template-rows: 1fr 6fr 1fr 6fr 1fr;
-        justify-content: center;
-        justify-items: center;
-        gap: 15rem;
-    }    
+    }
 
     .home_module_image {
         min-height: 30rem;
+        display: block;
     }
 
     .home_module_overons {
+        display: table;
         max-width: 90%;
         min-width: 0rem;
         grid-template-rows: 2fr 3fr;
@@ -234,11 +481,31 @@ main {      /* container for main content */
     }
 
     .home_module_contact {
+        display: table;
         max-width: 90%;
         min-width: 0rem;
         grid-template-rows: 2fr 3fr;
         grid-template-columns: 1fr;
     }
 
+    .home_module_content {
+        padding: 0;
+    }
+
+    .mobileimage {  /* makes mobile version image visilble */
+        display: block;
+    }
+
+    .desktopimage { /* makes desktop version image invisible */
+        display: none;
+    }
+
     /* INDEX MOBILE END */
+    /* FOOTER MOBILE START */
+
+    .footerbarcontainer {
+        display: flex;
+        flex-direction: column;
+        height: 10rem;
+    }
 }

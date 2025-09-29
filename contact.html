@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Bakkerij | Contact</title>
+        <script src="menuOp.js" defer></script>
+        <script src="formOp.js" defer></script>
+    </head>
+
+    <div class="menuscreen" id="menudiv">
+        <h1 id="closemenu">X</h1>
+        <div>
+            <a href="./index.html">Home</a><br>
+            <a href="./overons.html">Over ons</a><br>
+            <a href="./contact.html">Contact</a>  
+        </div>
+    </div>
+    
+    <body>
+        <header>
+            <div class="headerbarcontainer topborder">
+                <div class="headerbarsub">
+                    <img src="./assets/Logo/logo_small.png">
+                </div>
+                <div class="headerbarsub">
+                    <a href="./index.html">Home</a>         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="./overons.html">Over ons</a>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="./contact.html" class="currentpage underline">Contact</a>
+                    <img src="./assets/Logo/menu_icon.png" class="menuicon" id="openmenu">
+                </div>
+            </div>
+            <div class="bannercontainer">
+                <img src="./assets/Fotos_website/Image-3.jpg">
+                <div><h1>Contact</h1></div>
+            </div>
+        </header>
+
+        <main class="contact_main">
+            <div class="spacer"></div>
+
+            <div class="contact_modulescontainer">
+                <div class="contact_module_info">
+                    <h2 class="underline">Hier kunt u ons vinden!</h2>
+
+                    <h3>Adres</h3>
+                    <h4>Hollandsch Diep 61c<br>2904 EP, Capelle aan den IJssel</h4>
+
+                    <h3>Telefoonnummer</h3>
+                    <h4>+31 612345678</h4>
+
+                    <h3>Email</h3>
+                    <h4>Info@bakkerij.nl</h4>
+
+                    <h3>Openingstijden</h3>
+                    <table>
+                        <tr>
+                            <td>Maandag</td><td class="tabledivider">|</td><td>Gesloten</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td><td class="tabledivider">|</td><td>8:00 - 17:00</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td><td class="tabledivider">|</td><td>8:00 - 17:00</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td><td class="tabledivider">|</td><td>8:00 - 17:00</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td><td class="tabledivider">|</td><td>8:00 - 20:00</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td><td class="tabledivider">|</td><td>8:00 - 17:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td><td class="tabledivider">|</td><td>Gesloten</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="contact_module_form">
+                    <div class="contact_module_form_section">
+                        <br><label for="naam">Naam</label><br>
+                        <input type="text" id="contactform_naam" name="naam" class="formborders" required>
+                    </div>
+                    <div class="contact_module_form_section">
+                        <br><label for="email">Email adres</label><br>
+                        <input type="text" id="contactform_email" name="email" class="formborders" required>                    
+                    </div>
+                    <div class="contact_module_form_section">
+                        <br><label for="tel">Telefoonnummer</label><br>
+                        <input type="text" id="contactform_tel" name="tel" class="formborders" required>                    
+                    </div>
+                    <div class="contact_module_form_section">
+                        <br><label for="bericht">Bericht</label><br>
+                        <textarea type="textarea" id="contactform_bericht" name="bericht" class="formborders" required></textarea>
+                    </div>
+                    <div class="contact_module_form_buttoncontainer">
+                        <input type="submit" class="verzenden" value="Verzenden" id="contactform_verzenden">
+                    </div>
+                </div>
+            </div>
+
+            <div class="spacer"></div>
+        </main>
+
+        <footer>
+            <div class="footerbarcontainer headerbarcontainer">
+                <div class="footerbarsub">
+                    <p>© 2021 - Bakkerij</p>
+                </div>
+                <div class="footerbarsub">
+                    <a href="./index.html">Home</a>         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="./overons.html">Over ons</a>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="./contact.html" class="currentpage darkunderline">Contact</a>  
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

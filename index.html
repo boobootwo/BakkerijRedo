@@ -2,7 +2,17 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <title>Bakkerij | Home</title>
+        <script src="menuOp.js" defer></script>
     </head>
+
+    <div class="menuscreen" id="menudiv">
+        <h1 id="closemenu">X</h1>
+        <div>
+            <a href="./index.html">Home</a><br>
+            <a href="./overons.html">Over ons</a><br>
+            <a href="./contact.html">Contact</a>  
+        </div>
+    </div>
     
     <body>
         <header>
@@ -13,7 +23,8 @@
                 <div class="headerbarsub">
                     <a href="./index.html" class="currentpage underline">Home</a>       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="./overons.html">Over ons</a>                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="./contact.html">Contact</a>  
+                    <a href="./contact.html">Contact</a>
+                    <img src="./assets/Logo/menu_icon.png" class="menuicon" id="openmenu">
                 </div>
             </div>
             <div class="bannercontainer">
@@ -22,7 +33,7 @@
             </div>
         </header>
 
-        <main>
+        <main class="home_main">
             <div class="spacer"></div>
 
             <div class="home_module_overons">
@@ -44,6 +55,7 @@
             <div class="spacer"></div>
             
             <div class="home_module_contact">
+                <div class="home_module_image image2 mobileimage"></div>
                 <div class="home_module_content">
                     <h2>Contact</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien a arcu ornare lobortis commodo 
@@ -57,7 +69,7 @@
                         rhoncus. Quisque ornare erat in placerat facilisis. In a lorem eu neque varius consequat at in ante.</p>
                     <div class="readmorebutton">Lees meer</div>
                 </div>
-                <div class="home_module_image image2"></div>
+                <div class="home_module_image image2 desktopimage"></div>
             </div>
 
             <div class="spacer"></div>
