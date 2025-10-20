@@ -233,6 +233,7 @@ a { /* gets rid of links being blue */
     max-width: 90%;
     min-width: 90rem;
     min-height: fit-content;
+    height: fit-content;
 }
 
 .overons_module p {
@@ -289,6 +290,10 @@ a { /* gets rid of links being blue */
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.portraits_spacer {
+    display: none;
 }
 
 .icons a i {
@@ -520,13 +525,27 @@ a { /* gets rid of links being blue */
 
     /* OVER ONS MOBILE START */
 
+    .overons_main {
+        display: grid;
+        grid-template-rows: 1fr;
+    }
 
+    .overons_portraitsmodule {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 5rem;
+    }
 
     /* OVER ONS MOBILE END */
 
     /* CONTACT MOBILE START */
 
-    
+    .contact_modulescontainer {      /* container for main content in the contact.html file */
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 
     /* CONTACT MOBILE END */
 
