@@ -310,17 +310,18 @@ a { /* gets rid of links being blue */
     display: grid;
     justify-content: center;
     justify-items: center;
-    max-width: 150rem;
+    width: 100%;
+    grid-template-columns: 1fr 7fr 1fr; /* fixes width error that breaks for some reason if you dont add this */
+    grid-template-rows: 1fr 1fr; /* fixes bug where the footer is just eighty two billion light years beneath the form for some reason. */
 }
 
 .contact_modulescontainer {
-    max-width: 100%;
-    min-width: 90rem;
+    width: 100%;
     height: 50rem;
     padding: 1rem;
     gap: 1rem;
     display: grid;
-    grid-template-columns: 5fr 7fr;
+    grid-template-columns: 5fr 7fr; /* correct spacing */
 }
 
 .contact_module_info {
@@ -334,7 +335,7 @@ a { /* gets rid of links being blue */
     font-size: 45;
 }
 
-.contact_module_info h3 {
+.contact_module_info h3 {   /* so for some reason the header tags dont line up with those in the example document. i did this so that it appeared visually similar even though its not actually what the header tags look like "out of the box" if yk what i mean */
     font-size: 2rem;
     font-weight: 500;
     line-height: 0rem;
@@ -384,7 +385,7 @@ a { /* gets rid of links being blue */
 }
 
 .contact_module_form_section p {
-    color: red;
+    color: red; /* red = bad! if ya see this, somethin's bad! */
     line-height: 0.25rem;
     font-size: 1rem;
     display: none;
@@ -406,7 +407,7 @@ a { /* gets rid of links being blue */
     height: 2.5rem;
     width: 12rem;
     font-size: 1rem;
-    filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0,0,0,0.25));
+    filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0,0,0,0.25));  /* highlight when hovered */
 }
 
 .contact_module_form_buttoncontainer input:hover {
@@ -419,6 +420,9 @@ a { /* gets rid of links being blue */
 
 .footerbarcontainer {
     background-color: var(--prim);
+    bottom: 0rem;
+    position: relative;
+    z-index: 50;
 }
 
 .footerbarsub {
@@ -473,11 +477,11 @@ a { /* gets rid of links being blue */
     /* HEADER MOBILE START */
 
     .headerbarsub a {
-        display: none;
+        display: none;  /* make individual menu tags disappear */
     }
 
     .menuicon {
-        display: block;
+        display: block; /* make the menu button appear */
     }
 
     /* HEADER MOBILE END */
