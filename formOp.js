@@ -61,7 +61,7 @@ function telCheck(field) {
     // regex checks string for any non-number characters. returns false if there are
 }
 
-submitButton.addEventListener("click", () => console.log('bababa ' + telCheck(telInput)));
+/* submitButton.addEventListener("click", () => console.log('bababa ' + telCheck(telInput))); debug feature */
 
 
 submitButton.addEventListener("click", () => fieldReparse());
@@ -72,7 +72,7 @@ submitButton.addEventListener("click", () => checkIfValid());
 function checkIfValid() {
 
     // clears all errors beforehand before setting them, preventing two errors showing up at the same time (which makes sense, because one error needs to have no characters in the field whereas the other one literally need characters to spell out a slur.)
-    clearAllInvalid(nameInput) ; clearAllInvalid(emailInput) ; clearAllInvalid(telInput) ; clearAllInvalid(berichtInput) ; 
+    clearAllInvalid(nameInput) ; clearAllInvalid(emailInput) ; clearAllInvalid(telInput) ; clearAllInvalid(berichtInput); 
 
     // vvv check if field is empty                                                                   vvv special regex checks for email and phone number                                                vvv check if field contains swears                                                                      vvv if it is not empty and does not contain swears, change the xEmpty and xSwear variables to false and clear all related errors
     if (!nameField.length)      { nameValid = false ;    setInvalid(nameInput, 'lengthError') }                                                                                                         else if (swearCheck(nameField))      { nameValid = false ; setInvalid(nameInput, 'inputError') }        else { nameValid = true ; clearAllInvalid(nameInput) };
@@ -84,14 +84,14 @@ function checkIfValid() {
     // if text field is not empty nor contains swears, set the corresponding xEmpty value to false and run the function that disables corresponding UI
 
     // if there are no errors, send the form!
-    if (nameValid === true && emailValid === true && telValid === true && berichtValid === true) { sendForm(); }
+    if (nameValid === true && emailValid === true && telValid === true && berichtValid === true) { sendForm() };
 }
 
 function sendForm() {
-    console.log("############# FORM RECIEVED #############")
+    console.log("############# FORM RECIEVED #############");
     console.log(nameField + " | " + emailField + " | " + telField);
     console.log(berichtField);
-    console.log("##########################################")
+    console.log("##########################################");
 }
 
 /* invalid input handling */
